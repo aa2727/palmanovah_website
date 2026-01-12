@@ -15,9 +15,15 @@ ul {
 }
 
 header {
-    background-image: url("../media/img/pide.jpg");
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.517),rgba(255, 255, 255, 0)),
+    url("../pages/media/img/pide.jpg");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: left;
     margin: 0%;
     padding: 1%;
+    margin-bottom: 2%;
     text-align: center;
 }
 
