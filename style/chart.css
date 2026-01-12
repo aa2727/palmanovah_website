@@ -25,6 +25,7 @@ header {
     url("../pages/media/img/pide.jpg");
     background-origin: border-box;
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: left;
     margin: 0%;
     padding: 1%;
