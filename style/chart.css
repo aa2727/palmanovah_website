@@ -1,4 +1,3 @@
-
 body {
     background-color: #30361B;
     color: white;
@@ -35,9 +34,9 @@ section.main section {
 }
 
 header {
-    background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.517),rgba(255, 255, 255, 0)),
-    url("../pages/media/img/pide.jpg");
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.517), rgba(255, 255, 255, 0)),
+        url("../pages/media/img/pide.jpg");
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,15 +56,15 @@ section.presentation {
     margin: 2%;
 }
 
-section.presentation p{
+section.presentation p {
     padding: 0%;
     margin: 0%;
     /* font-size: 150%; */
 }
 
 #logo {
-    background-image: 
-    url("../pages/media/img/palmanovah_logo.jpg");
+    background-image:
+        url("../pages/media/img/palmanovah_logo.jpg");
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
@@ -76,10 +75,9 @@ section.presentation p{
     padding-bottom: 70%;
     color: transparent;
     margin-left: 10%;
-     -webkit-text-stroke: 0px black;
-    
-}
+    -webkit-text-stroke: 0px black;
 
+}
 
 footer {
     font-size: small;
@@ -93,8 +91,90 @@ footer {
     text-align: center;
 }
 
-nav ul{
+nav > ul {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    justify-content: center;
+    grid-template-columns: 18% 18% 18% 18% 18% 10%;
+    justify-content: left;
+    margin-left: 0%;
+    padding-left: 5%;
+}
+
+#language_button {
+    width: fit-content;
+    padding: 0%;
+    position: absolute;
+    margin-bottom: 10%;
+}
+
+#language_button:hover>li {
+    display: block;
+
+}
+
+#language_button>li {
+    display: none;
+    transition: 2s;
+    margin: 8px;
+    position: relative;
+    
+}
+
+#language_button>li a {
+    color: transparent;
+    text-decoration: none;
+}
+
+#language_button>li.current {
+    text-decoration: underline;
+    display: block;
+    width: 30px;
+}
+
+#language_button>li.current::after {
+    content: "▼";
+    position: relative;
+    right: 50px;
+    color: white;
+    border: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+#french {
+    background-image: 
+    url("../pages/media/img/france.png");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    /* border-radius: 50%; */
+    color: transparent;
+
+}
+
+#english {
+    background-image: 
+    url("../pages/media/img/uk.png");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    /* border-radius: 50%; */
+    color: transparent;
+    
+
+}
+
+#turkish {
+    background-image: 
+    url("../pages/media/img/turkey.png");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    /* border-radius: 50%; */
+    color: transparent;
 }
