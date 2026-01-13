@@ -4,7 +4,7 @@ body {
     color: white;
     margin: 0%;
     font-family: 'Risque';
-    /* font-size: 1.5em; */
+    font-size: 1.5em;
 }
 
 a {
@@ -12,9 +12,9 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+/* h1 {
+    font-family: ;
+} */
 
 ul {
     list-style-type: none;
@@ -46,8 +46,39 @@ header {
     padding: 1%;
     margin-bottom: 2%;
     text-align: center;
+
 }
 
+section.presentation {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+section.presentation p{
+    padding: 0%;
+    margin: 0%;
+    /* font-size: 150%; */
+}
+
+#logo {
+    background-image: 
+    url("../pages/media/img/palmanovah_logo.jpg");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    border-radius: 50%;
+    width: 70%;
+    height: 0px;
+    padding-bottom: 70%;
+    color: transparent;
+    margin-left: 10%;
+     -webkit-text-stroke: 0px black;
+    
+}
 
 
 footer {
