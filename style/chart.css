@@ -4,6 +4,7 @@ body {
     color: white;
     margin: 0%;
     font-family: 'Risque';
+    /* font-size: 1.5em; */
 }
 
 a {
@@ -17,6 +18,20 @@ h1 {
 
 ul {
     list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section p {
+    padding: 1%;
+}
+
+section.main section {
+    text-align: center;
+    margin: 2%;
 }
 
 header {
