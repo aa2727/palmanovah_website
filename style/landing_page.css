@@ -71,3 +71,24 @@ iframe {
 #positionmap > * {
     width: 50%;
 }
+
+section#food_presentation {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 2%;
+    margin-bottom: 25%;
+}
+
+section#food_presentation :nth-child(even) {
+    
+    transform: translateX(20%);
+}
+section#food_presentation :nth-child(odd) {
+    transform: translateY(50%);
+}
+
+section#food_presentation > img.food {
+    width: 45%;
+}
