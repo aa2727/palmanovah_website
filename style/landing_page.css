@@ -26,6 +26,10 @@ section.welcome article {
     gap: 1%;
 }
 
+section.welcome article > img {
+    width: 15em;
+}
+
 section.welcome article p {
     width: 50%;
 }
