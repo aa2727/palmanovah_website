@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../../style/chart.css">
     <link rel="stylesheet" href="../../style/landing_page.css">
     <link href='https://fonts.googleapis.com/css?family=Risque' rel='stylesheet'>
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
 </head>
 <header>
     <nav>
@@ -53,8 +55,6 @@
 
 <body>
     <section class="main">
-
-
         <section class="welcome">
             <h2>Bienvenue chez PalmaNovah</h2>
             <article>
@@ -71,7 +71,7 @@
             <section id="food_presentation">
                 <img class="food" src="../media/img/lamb_plate.jpeg" alt="Photo de l'assiette ciger">
                 <img class="food" src="../media/img/grill_plate.jpeg" alt="Photo de l'assiette de grillades mix">
-                
+
             </section>
         </section>
 
@@ -96,10 +96,18 @@
                         </p>
                     </article>
 
-                    <iframe width="450" height="250" frameborder="0" style="border:0"
-                        referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/MAP_MODE"
-                        allowfullscreen>
-                    </iframe>
+                    <div id="map" style="width: 100%; height: 400px"></div>
+                    <script>
+                        const map = new maplibregl.Map({
+                            style: 'https://tiles.openfreemap.org/styles/liberty',
+                            center: [7.737526822193052,48.54300349844061],
+                            zoom: 15,
+                            container: 'map',
+                        })
+                        const marker = new maplibregl.Marker()
+                            .setLngLat([7.734726807919458, 48.541229405962746])
+                            .addTo(map);
+                    </script>
                 </section>
             </article>
 
