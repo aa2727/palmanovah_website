@@ -35,8 +35,8 @@ section.main section {
 
 header {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.517), rgba(255, 255, 255, 0)),
-        url("../pages/media/img/pide.jpg");
+        linear-gradient(rgba(0, 0, 0, 0.517), rgba(150, 150, 150, 0)),
+        url("../pages/media/img/food/pide_grill_mix.jpg");
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,6 +91,11 @@ footer {
     text-align: center;
 }
 
+footer a {
+    color: #AAAAAA;
+    text-decoration: none;
+}
+
 nav > ul {
     display: grid;
     grid-template-columns: 18% 18% 18% 18% 18% 10%;
@@ -142,7 +147,7 @@ nav > ul {
 
 #french {
     background-image: 
-    url("../pages/media/img/france.png");
+    url("../pages/media/img/flags/france.png");
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
@@ -155,7 +160,7 @@ nav > ul {
 
 #english {
     background-image: 
-    url("../pages/media/img/uk.png");
+    url("../pages/media/img/flags/uk.png");
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
@@ -169,7 +174,7 @@ nav > ul {
 
 #turkish {
     background-image: 
-    url("../pages/media/img/turkey.png");
+    url("../pages/media/img/flags/turkey.png");
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
