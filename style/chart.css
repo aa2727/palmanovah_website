@@ -114,82 +114,96 @@ nav > ul {
     padding-left: 5%;
 }
 
+/* --- CONTENEUR --- */
 #language_button {
-    width: fit-content;
-    padding: 0%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* --- ITEM COURANT (bouton principal) --- */
+#language_button > li.current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#language_button > li.current:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
+}
+
+/* Flèche */
+#language_button > li.current::after {
+    content: "▾";
     position: absolute;
-    margin-bottom: 10%;
-}
-
-#language_button:hover>li {
-    display: block;
-
-}
-
-#language_button>li {
-    display: none;
-    transition: 2s;
-    margin: 8px;
-    position: relative;
-    
-}
-
-#language_button>li a {
-    color: transparent;
-    text-decoration: none;
-}
-
-#language_button>li.current {
-    text-decoration: underline;
-    display: block;
-    width: 30px;
-}
-
-#language_button>li.current::after {
-    content: "▼";
-    position: relative;
-    right: 50px;
+    bottom: -14px;
+    font-size: 12px;
     color: white;
-    border: none;
-    margin: 0%;
-    padding: 0%;
+    opacity: 0.8;
 }
 
-#french {
-    background-image: 
-    url("../pages/media/img/flags/france.png");
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 30px;
-    /* border-radius: 50%; */
-    color: transparent;
-
+/* --- DROPDOWN --- */
+#language_button > li {
+    display: none;
 }
 
-#english {
-    background-image: 
-    url("../pages/media/img/flags/uk.png");
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 30px;
-    /* border-radius: 50%; */
-    color: transparent;
-    
-
+#language_button:hover > li {
+    display: flex;
 }
 
-#turkish {
-    background-image: 
-    url("../pages/media/img/flags/turkey.png");
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 30px;
-    /* border-radius: 50%; */
+/* Conteneur déroulant */
+#language_button:hover {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 22px;
+    padding: 8px 6px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* --- ITEMS DU MENU --- */
+#language_button > li:not(.current) {
+    width: 36px;
+    height: 36px;
+    margin: 6px auto;
+
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(-6px);
+    animation: fadeIn 0.25s ease forwards;
+}
+
+#language_button:hover > li:not(.current) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover sur les langues */
+#language_button > li:not(.current):hover {
+    transform: scale(1.1);
+}
+
+/* --- ANIMATION --- */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- LIENS --- */
+#language_button a {
+    display: block;
+    width: 100%;
+    height: 100%;
     color: transparent;
 }
