@@ -113,97 +113,137 @@ nav > ul {
     margin-left: 0%;
     padding-left: 5%;
 }
-
-/* --- CONTENEUR --- */
+/* ====== CONTENEUR ====== */
 #language_button {
-    position: relative;
+    position: absolute;
     padding: 0;
     margin: 0;
-    cursor: pointer;
 }
 
-/* --- ITEM COURANT (bouton principal) --- */
+/* ====== BOUTON PRINCIPAL ====== */
 #language_button > li.current {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
 
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(6px);
+    width: 34px;
+    height: 22px;
 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.6);
+
+    cursor: pointer;
 }
 
-#language_button > li.current:hover {
-    transform: scale(1.08);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
-}
-
-/* Flèche */
+/* flèche */
 #language_button > li.current::after {
     content: "▾";
-    position: absolute;
-    bottom: -14px;
-    font-size: 12px;
+    padding-bottom: 2px;
+    font-size: 15px;
+    margin-left: 4px;
     color: white;
-    opacity: 0.8;
 }
-
-/* --- DROPDOWN --- */
-#language_button > li {
-    display: none;
-}
-
-#language_button:hover > li {
-    display: flex;
-}
-
-/* Conteneur déroulant */
-#language_button:hover {
-    background-color: rgba(0, 0, 0, 0.55);
-    border-radius: 22px;
-    padding: 8px 6px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-}
-
-/* --- ITEMS DU MENU --- */
-#language_button > li:not(.current) {
-    width: 36px;
-    height: 36px;
-    margin: 6px auto;
-
-    border-radius: 50%;
-    opacity: 0;
-    transform: translateY(-6px);
-    animation: fadeIn 0.25s ease forwards;
-}
-
-#language_button:hover > li:not(.current) {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Hover sur les langues */
-#language_button > li:not(.current):hover {
-    transform: scale(1.1);
-}
-
-/* --- ANIMATION --- */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* --- LIENS --- */
-#language_button a {
+#language_button:hover>li {
     display: block;
-    width: 100%;
-    height: 100%;
+
+}
+
+#language_button>li {
+    display: none;
+    transition: 2s;
+    margin: 8px;
+    position: relative;
+    
+}
+
+#language_button>li a {
     color: transparent;
+    text-decoration: none;
+}
+
+#language_button>li.current {
+    text-decoration: underline;
+    display: block;
+
+}
+
+#language_button>li.current::after {
+    content: "▼";
+    position: relative;
+    right: 50px;
+    color: white;
+    border: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+#french {
+    background-image: 
+    url("../pages/media/img/flags/france.png");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    /* border-radius: 50%; */
+    color: transparent;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 22px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.6);
+    
+
+}
+
+#english {
+    background-image: 
+    url("../pages/media/img/flags/uk.png");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    /* border-radius: 50%; */
+    color: transparent;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 22px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.6);
+    
+
+}
+
+#turkish {
+    background-image: 
+    url("../pages/media/img/flags/turkey.png");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    /* border-radius: 50%; */
+    color: transparent;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 22px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.6);
 }
