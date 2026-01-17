@@ -15,6 +15,16 @@ a {
     font-family: ;
 } */
 
+section.main > section:before {
+    border-top: #AAAAAA 1px solid;
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    content: "";
+    height: 1px;
+    text-align: center;
+}
+
 ul {
     list-style-type: none;
 }

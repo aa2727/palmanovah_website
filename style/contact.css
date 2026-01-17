@@ -1,0 +1,9 @@
+section.main > section.other_info:before {
+    border-top: #AAAAAA 0px solid;
+}
+
+#mail_address, #phone_number {
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+}
