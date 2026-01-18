@@ -3,4 +3,61 @@ img {
     padding: 1%;
     border: 1px solid white;
 }
+/* beginning part*/
+.beginning {
+    display: flex;
+    flex-direction:  column;
+}
+.beginning article {
+    display: flex;
+    flex-direction:  row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
 
+.beginning article * {
+    flex: 1;
+}
+.beginning h2 {
+    text-align: left;
+}
+
+/* palmanovahrestaurant part*/
+.palmanovahrestaurant {
+    display: flex;
+    flex-direction:  column;
+}
+
+.palmanovahrestaurant article {
+    display: flex;
+    flex-direction:  row;
+    align-items: center;
+
+    gap: 1em;
+}
+
+.palmanovahrestaurant article * {
+    flex: 1;
+}
+
+/* Today part*/
+.today {
+    display: flex;
+    flex-direction:  column;
+}
+.today article {
+    display: flex;
+    flex-direction:  row;
+    align-items: center;
+
+    gap: 1em;
+}
+
+.today article * {
+    flex: 1;
+}
+
+.today h2 {
+    text-align: right;
+}
