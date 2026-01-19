@@ -1,0 +1,90 @@
+.diapo {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.elements {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    z-index: 1;
+}
+
+.element img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Image active (au centre) */
+.element.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 3;
+}
+
+/* Image précédente */
+.element.prev {
+    opacity: 0.4;
+    transform: translate(-110%, -50%) scale(0.7);
+    z-index: 2;
+}
+
+/* Image suivante */
+.element.next {
+    opacity: 0.4;
+    transform: translate(10%, -50%) scale(0.7);
+    z-index: 2;
+}
+
+/* Caption */
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Flèches */
+#nav-gauche,
+#nav-droite {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
+    user-select: none;
+    background-color: black;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-gauche {
+    left: 10px;
+}
+
+#nav-droite {
+    right: 10px;
+}
