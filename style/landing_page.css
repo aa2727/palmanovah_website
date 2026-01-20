@@ -82,3 +82,10 @@ section#food_presentation :nth-child(odd) {
 section#food_presentation > img.food {
     width: 45%;
 }
+
+img.storefront {
+    border-radius: 15px;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 600px;
+}
