@@ -1,32 +1,40 @@
+class Diaporama {
+    constructor(container) {
+        this.container = container;
+        this.slides = container.querySelectorAll(".element");
+        this.prevBtn = container.querySelector("#nav-gauche");
+        this.nextBtn = container.querySelector("#nav-droite");
+        this.index = 0;
 
-const slides = document.querySelectorAll(".element");
-const prevBtn = document.getElementById("nav-gauche");
-const nextBtn = document.getElementById("nav-droite");
+        this.updateSlides();
 
-let index = 0;
+        this.prevBtn.addEventListener("click", () => this.prev());
+        this.nextBtn.addEventListener("click", () => this.next());
 
-function updateSlides() {
-    slides.forEach(slide => {
-        slide.classList.remove("active", "prev", "next");
-    });
+        window.addEventListener("resize", () => this.updateSlides());
+    }
 
-    const prevIndex = (index - 1 + slides.length) % slides.length;
-    const nextIndex = (index + 1) % slides.length;
+    updateSlides() {
+        this.slides.forEach(slide => slide.classList.remove("active", "prev", "next"));
 
-    slides[index].classList.add("active");
-    slides[prevIndex].classList.add("prev");
-    slides[nextIndex].classList.add("next");
+        const prevIndex = (this.index - 1 + this.slides.length) % this.slides.length;
+        const nextIndex = (this.index + 1) % this.slides.length;
+
+        this.slides[this.index].classList.add("active");
+        this.slides[prevIndex].classList.add("prev");
+        this.slides[nextIndex].classList.add("next");
+    }
+
+    prev() {
+        this.index = (this.index - 1 + this.slides.length) % this.slides.length;
+        this.updateSlides();
+    }
+
+    next() {
+        this.index = (this.index + 1) % this.slides.length;
+        this.updateSlides();
+    }
 }
 
-prevBtn.addEventListener("click", () => {
-    index = (index - 1 + slides.length) % slides.length;
-    updateSlides();
-});
-
-nextBtn.addEventListener("click", () => {
-    index = (index + 1) % slides.length;
-    updateSlides();
-});
-
-// Initialisation
-updateSlides();
+// Initialisation pour **tous les diaporamas** de la page
+document.querySelectorAll(".diapo").forEach(container => new Diaporama(container));
