@@ -17,22 +17,29 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="../fr/index.html">Accueil</a></li>
-                <li><a href="../fr/menu_fr.pdf">Menu</a></li>
-                <li><a href="../fr/galery.html">Galerie</a></li>
-                <li><a href="../fr/contact.html">Contact</a></li>
-                <li><a href="../fr/about.html">À propos</a></li>
-                <li>
-                    <ul id="language_button">
-                        <li id="french" class="current">Français</li>
-                        <li id="english"><a href="../en/index.html">English</a></li>
-                        <li id="turkish"><a href="../tk/index.html">Türkçe</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+    <nav>
+  <ul class="main-menu">
+    <li><a href="../fr/index.html">Accueil</a></li>
+    <li><a href="../fr/menu_fr.pdf">Menu</a></li>
+    <li><a href="../fr/galery.html">Galerie</a></li>
+    <li><a href="../fr/contact.html">Contact</a></li>
+    <li><a href="../fr/about.html">À propos</a></li>
+
+    <li class="lang">
+      <!-- langue courante = bouton -->
+      <a href="#" class="lang-current" aria-haspopup="true">
+        <span class="flag fr"></span>
+      </a>
+
+      <ul class="lang-dropdown">
+        <li><a href="../fr/index.html"><span class="flag fr"></span></a></li>
+        <li><a href="../en/index.html"><span class="flag en"></span></a></li>
+        <li><a href="../tk/index.html"><span class="flag tr"></span></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
         <section class="presentation">
             <div id="presentation_left">
@@ -90,7 +97,7 @@
                 </section>
                 <section id="positionmap">
                     <article id="locationinfo">
-                        <p>A seulement 4 minutes à pied depuis l’arrêt Colonne du tram A !</p>
+                        <p>A seulement 4 minutes à pied depuis l'arrêt Colonne du tram A !</p>
                         <p>Dégustez nos spécialités turques sur place ou à emporter. Pour commander, appelez-nous au
                             03.88.39.75.62
                         </p>
