@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -10,50 +10,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../style/chart.css">
     <link rel="stylesheet" href="../../style/landing_page.css">
-    <link href='https://fonts.googleapis.com/css?family=Risque' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
     <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
-    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet">
 </head>
-<header>
-    <nav>
-        <ul>
-            <li><a href="../fr/index.html">Accueil</a></li>
-            <li><a href="../fr/menu_fr.pdf">Menu</a></li>
-            <li><a href="../fr/galery.html">Galerie</a></li>
-            <li><a href="../fr/contact.html">Contact</a></li>
-            <li><a href="../fr/about.html">À propos</a></li>
-            <li>
-                <ul id="language_button">
-                    <li id="french" class="current">Français</li>
-                    <li id="english"><a href="../en/index.html">English</a></li>
-                    <li id="turkish"><a href="../tk/index.html">Türkçe</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-    <section class="presentation">
-        <div id="presentation_left">
-            <h1>Cuisine Turque</h1>
-            <section>
-                <p>Ouvert 7/7 de 11h à 23h</p>
-                <p>Sur place ou à emporter</p>
-            </section>
-        </div>
-        <div id="presentation_right">
-            <h1 id="logo">PalmaNovah</h1>
-            <section>
-                <p>03.88.39.75.62</p>
-                <p>67 Av. de Strasbourg, Illkirch-Graffenstaden</p>
-            </section>
-        </div>
-
-
-    </section>
-
-</header>
 
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../fr/index.html">Accueil</a></li>
+                <li><a href="../fr/menu_fr.pdf">Menu</a></li>
+                <li><a href="../fr/galery.html">Galerie</a></li>
+                <li><a href="../fr/contact.html">Contact</a></li>
+                <li><a href="../fr/about.html">À propos</a></li>
+                <li>
+                    <ul id="language_button">
+                        <li id="french" class="current">Français</li>
+                        <li id="english"><a href="../en/index.html">English</a></li>
+                        <li id="turkish"><a href="../tk/index.html">Türkçe</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="presentation">
+            <div id="presentation_left">
+                <h1>Cuisine Turque</h1>
+                <section>
+                    <p>Ouvert 7/7 de 11h à 23h</p>
+                    <p>Sur place ou à emporter</p>
+                </section>
+            </div>
+            <div id="presentation_right">
+                <h1 id="logo">PalmaNovah</h1>
+                <section>
+                    <p>03.88.39.75.62</p>
+                    <p>67 Av. de Strasbourg, Illkirch-Graffenstaden</p>
+                </section>
+            </div>
+
+
+        </section>
+
+    </header>
     <section class="main">
         <section class="welcome">
             <h2>Bienvenue chez PalmaNovah</h2>
@@ -96,11 +96,11 @@
                         </p>
                     </article>
 
-                    <div id="map" style="width: 100%; height: 400px"></div>
+                    <div id="map"></div>
                     <script>
                         const map = new maplibregl.Map({
                             style: 'https://tiles.openfreemap.org/styles/liberty',
-                            center: [7.737526822193052,48.54300349844061],
+                            center: [7.737526822193052, 48.54300349844061],
                             zoom: 15,
                             container: 'map',
                         })
@@ -113,25 +113,25 @@
 
         </section>
     </section>
+    <footer>
+        <section>
+            <h2>Suivez-nous sur nos réseaux sociaux</h2>
+            <p><a href="https://www.instagram.com/palmanovahrestaurant/">Instagram</a></p>
+            <p><a href="">Facebook</a></p>
+            <p><a href="https://www.tiktok.com/@palmanovahrestaurant">Tiktok</a></p>
+        </section>
+        <section>
+            <h2> Nous contacter
+            </h2>
+            <p>Téléphone : 03.88.39.75.62</p>
+            <p>Email : contact@palmanovahrestaurant.fr</p>
+            <p>Instagram : @palmanovahrestaurant</p>
+        </section>
+        <section>
+            <h2>Mentions Légales</h2>
+            <p>Tous droits réservés © PalmaNovah 2026</p>
+        </section>
+    </footer>
 </body>
-<footer>
-    <section>
-        <h2>Suivez-nous sur nos réseaux sociaux</h2>
-        <p><a href="https://www.instagram.com/palmanovahrestaurant/">Instagram</a></p>
-        <p><a href="">Facebook</a></p>
-        <p><a href="https://www.tiktok.com/@palmanovahrestaurant">Tiktok</a></p>
-    </section>
-    <section>
-        <h2> Nous contacter
-        </h2>
-        <p>Téléphone : 03.88.39.75.62</p>
-        <p>Email : contact@palmanovahrestaurant.fr</p>
-        <p>Instagram : @palmanovahrestaurant</p>
-    </section>
-    <section>
-        <h2>Mentions Légales</h2>
-        <p>Tous droits réservés © PalmaNovah 2026</p>
-    </section>
-</footer>
 
 </html>
