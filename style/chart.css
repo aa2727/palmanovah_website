@@ -9,6 +9,14 @@ body {
 a {
     color: white;
     text-decoration: none;
+    transition: all 1s ease-out;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+a:active{
+    color: black;
 }
 
 h2 {
