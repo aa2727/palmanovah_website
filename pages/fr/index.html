@@ -17,28 +17,28 @@
 
 <body>
     <header>
-    <nav>
-  <ul class="main-menu">
-    <li><a href="../fr/index.html">Accueil</a></li>
-    <li><a href="../fr/menu_fr.pdf">Menu</a></li>
-    <li><a href="../fr/galery.html">Galerie</a></li>
-    <li><a href="../fr/contact.html">Contact</a></li>
-    <li><a href="../fr/about.html">À propos</a></li>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="../fr/index.html">Accueil</a></li>
+                <li><a href="../fr/menu_fr.pdf">Menu</a></li>
+                <li><a href="../fr/galery.html">Galerie</a></li>
+                <li><a href="../fr/contact.html">Contact</a></li>
+                <li><a href="../fr/about.html">À propos</a></li>
 
-    <li class="lang">
-      <!-- langue courante = bouton -->
-      <a href="#" class="lang-current" aria-haspopup="true">
-        <span class="flag fr"></span>
-      </a>
+                <li class="lang">
+                    <!-- langue courante = bouton -->
+                    <a href="#" class="lang-current" aria-haspopup="true">
+                        <span class="flag fr"></span>
+                    </a>
 
-      <ul class="lang-dropdown">
-        <li><a href="../fr/index.html"><span class="flag fr"></span></a></li>
-        <li><a href="../en/index.html"><span class="flag en"></span></a></li>
-        <li><a href="../tk/index.html"><span class="flag tr"></span></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+                    <ul class="lang-dropdown">
+                        <li><a href="../fr/index.html"><span class="flag fr"></span></a></li>
+                        <li><a href="../en/index.html"><span class="flag en"></span></a></li>
+                        <li><a href="../tk/index.html"><span class="flag tr"></span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
 
 
         <section class="presentation">
@@ -88,33 +88,38 @@
                 <section class="storefront">
                     <img class="storefront" src="../media/img/palmanovah_devanture.jpg"
                         alt="Image de la devanture du restaurant">
-                    <p>Venez savourer nos plats au
-                        67 Av. de Strasbourg,
-                        Illkirch-Graffenstaden. <br>
-                        À 10 minutes en voiture depuis le centre de Strasbourg.
-                    </p>
+                    <article class="access">
+                        <p>Venez savourer nos plats au
+                            67 Av. de Strasbourg,
+                            Illkirch-Graffenstaden.
+                        </p>
+                        <p>
+                            À 10 minutes en voiture depuis le centre de Strasbourg.
+                        </p>
+                        <p>A seulement 4 minutes à pied depuis l'arrêt Colonne du tram A !</p>
+
+                    </article>
 
                 </section>
                 <section id="positionmap">
                     <article id="locationinfo">
-                        <p>A seulement 4 minutes à pied depuis l'arrêt Colonne du tram A !</p>
+                        <div id="map"></div>
                         <p>Dégustez nos spécialités turques sur place ou à emporter. Pour commander, appelez-nous au
                             03.88.39.75.62
                         </p>
-                    </article>
 
-                    <div id="map"></div>
-                    <script>
-                        const map = new maplibregl.Map({
-                            style: 'https://tiles.openfreemap.org/styles/liberty',
-                            center: [7.737526822193052, 48.54300349844061],
-                            zoom: 15,
-                            container: 'map',
-                        })
-                        const marker = new maplibregl.Marker()
-                            .setLngLat([7.734726807919458, 48.541029405962746])
-                            .addTo(map);
-                    </script>
+                        <script>
+                            const map = new maplibregl.Map({
+                                style: 'https://tiles.openfreemap.org/styles/liberty',
+                                center: [7.737526822193052, 48.54300349844061],
+                                zoom: 15,
+                                container: 'map',
+                            })
+                            const marker = new maplibregl.Marker()
+                                .setLngLat([7.734726807919458, 48.541029405962746])
+                                .addTo(map);
+                        </script>
+                    </article>
                 </section>
             </article>
 
